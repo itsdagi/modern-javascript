@@ -7,10 +7,16 @@ function addItem(e) {
   const newItem = itemInput.value;
     // validate Input 
 
-    if(newItem=== ""){
+    if(newItem === "" ){
         alert('please add an item');
           return;
     }
+   
+    //create list item
+  const li = document.createElement('li');
+  li.appendChild(document.createTextNode(newItem));
+
+  console.log(li)
 
 }
 // Event Listners
