@@ -1,7 +1,17 @@
 breakfastPromise = new Promise((resolve, reject)=>{
-setTimeout(()=>{
-    resolve('Your order is ready come and get it !');
-},3000)
+    setTimeout(()=>{
+        const order = false;
+        if(order){
+            resolve('Take Order!')
+        }
+        else{
+            reject('Take your cash')
+        }
+    },5000)
 })
 
 console.log(breakfastPromise)
+
+breakfastPromise
+.then(val => console.log(val))
+.catch(err => console.log(err))
