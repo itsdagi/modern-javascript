@@ -19,6 +19,8 @@ function addItem(e) {
   console.log(li)
 
 }
+addItem()
+console.log(addItem)
 // Event Listners
 
 itemForm.addEventListener('submit', addItem);
