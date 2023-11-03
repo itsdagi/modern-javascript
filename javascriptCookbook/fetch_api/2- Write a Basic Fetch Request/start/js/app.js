@@ -42,6 +42,7 @@ function fetchBreedImage(){
     const breed = select.value;
     const img = card.querySelector('img')
     const p = card.querySelector('p')
+    fetchData(`https://dog.ceo/api/breed/${breed}/list`)
 }
 // ------------------------------------------
 //  EVENT LISTENERS
