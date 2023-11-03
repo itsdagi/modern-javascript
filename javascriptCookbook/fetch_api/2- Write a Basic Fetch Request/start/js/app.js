@@ -5,6 +5,9 @@ const form = document.querySelector('form');
 // ------------------------------------------
 //  FETCH FUNCTIONS
 // ------------------------------------------
+fetch('https://dog.ceo/dog-api/breeds-list')
+.then(response =>response.json())
+.then(data => console.log(data))
 
 fetch('https://dog.ceo/api/breeds/image/random')
 .then(response =>response.json())
@@ -12,6 +15,8 @@ fetch('https://dog.ceo/api/breeds/image/random')
 // ------------------------------------------
 //  HELPER FUNCTIONS
 // ------------------------------------------
+
+
 
 function generateImage(data){
     const html= `
