@@ -46,5 +46,5 @@ btn.addEventListener('click', async (event) => {
   event.target.textContent = "Loading...";
   const astros = getPeopleInSpace(astrosUrl)
   generateHTML(astros);
-  event.target.removeEventListener();
+  event.target.removeEventListener()
 });
