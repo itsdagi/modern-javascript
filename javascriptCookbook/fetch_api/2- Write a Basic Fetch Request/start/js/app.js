@@ -8,11 +8,18 @@ const form = document.querySelector('form');
 
 fetch('https://dog.ceo/api/breeds/image/random')
 .then(response =>response.json())
-.then(data => console.log(data.message))
+.then(data => generateImage(data.message))
 // ------------------------------------------
 //  HELPER FUNCTIONS
 // ------------------------------------------
 
+function generateImage(data){
+    const html= `
+    <img src ='${data}' alt>
+    <p>click to view images of ${select.value}s</p>
+    `;
+    card.innerHTML = html
+}
 
 
 // ------------------------------------------
