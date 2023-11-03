@@ -42,7 +42,12 @@ function fetchBreedImage(){
     const breed = select.value;
     const img = card.querySelector('img')
     const p = card.querySelector('p')
-    fetchData(`https://dog.ceo/api/breed/${breed}/list`)
+    fetchData(`https://dog.ceo/api/breed/${breed}/images/random`)
+    .then(data => {
+        img.src = data.message;
+        img.alt = breed;
+        p.textContent = `Click to view more ${breed}s`
+    })
 }
 // ------------------------------------------
 //  EVENT LISTENERS
