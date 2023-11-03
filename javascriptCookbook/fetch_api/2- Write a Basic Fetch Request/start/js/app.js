@@ -7,8 +7,8 @@ const form = document.querySelector('form');
 // ------------------------------------------
 
 fetch('https://dog.ceo/api/breeds/image/random')
-.then(respose.json())
-
+.then(response =>response.json())
+.then(data => console.log(data.message))
 // ------------------------------------------
 //  HELPER FUNCTIONS
 // ------------------------------------------
